@@ -39,20 +39,46 @@ export class AgeCalculator {
     let avgLife = 71;
     if (gender === "female"){
       return avgLife += 1;
-    } else avgLife -= 3;
-  }
-
-  yearsLeftOnEarth(date, gender){
-    let avgAge = this.averageLifeExpectancy(gender);
-    let yourAge = this.yearAge(date);
-    if(yourAge > avgAge){
-      let outlivedYears = yourAge - avgAge;
-      return("You have outlived your life expectancy by " + outlivedYears + " years.")
     } else {
-      return avgAge - yourAge;
+      return avgLife -= 3;
     }
   }
 
+  yearsLeftOnEarth(date, gender){
+    let averageAge = this.averageLifeExpectancy(gender);
+    let yourAge = this.yearAge(date);
+    if(yourAge > averageAge){
+      const outlivedYears = yourAge - averageAge;
+      return("You have outlived your life expectancy on Earth by " + outlivedYears + " years.")
+    } else {
+      const yearsLeft = Math.floor(averageAge - yourAge);
+      return ("You have " + yearsLeft + " years left to live on Earth.");
+    }
+  }
+
+  yearsLeftOnMercury(date, gender){
+    const earthExpectancy = this.averageLifeExpectancy(gender);
+    let mercuryExpectancy = Math.floor(earthExpectancy / 0.24);
+    let yourAge = this.mercuryAge(date);
+    if(yourAge > mercuryExpectancy){
+      const outlivedYears = Math.floor(yourAge - mercuryExpectancy);
+      return("You have outlived your life expectancy on Mercury by " + outlivedYears + " years.")
+    } else {
+      return Math.floor(mercuryExpectancy - yourAge);
+    }
+  }
+
+  // yearsLeftOnVenus(date, gender){
+  //   const earthExpectancy = this.averageLifeExpectancy(gender);
+  //   let mercuryExpectancy = Math.floor(earthExpectancy / 0.24);
+  //   let yourAge = this.mercuryAge(date);
+  //   if(yourAge > mercuryExpectancy){
+  //     const outlivedYears = Math.floor(yourAge - mercuryExpectancy);
+  //     return("You have outlived your life expectancy on Merucry by " + outlivedYears + " years.")
+  //   } else {
+  //     return Math.floor(mercuryExpectancy - yourAge);
+  //   }
+  // }
 
 }
 

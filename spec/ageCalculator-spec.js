@@ -62,15 +62,31 @@ describe('AgeCalculator', function(){
     expect(averageLifeExpectancy).toEqual(72);
   });
 
+  it("should calculate average life expectancy based on gender", function(){
+    let averageLifeExpectancy = calculate.averageLifeExpectancy("male");
+    expect(averageLifeExpectancy).toEqual(68);
+  });
+
   it("should calculate number of years left based on average life expectancy", function(){
     let yearsLeft = calculate.yearsLeftOnEarth(birthdate, "female");
-    expect(yearsLeft).toEqual(55);
+    expect(yearsLeft).toEqual("You have 55 years left to live on Earth.");
   });
 
   it("should calculate number of years outlived based on average life expectancy", function(){
     let yearsLeft = calculate.yearsLeftOnEarth('1917-09-08', "female");
-    expect(yearsLeft).toEqual("You have outlived your life expectancy by 28 years.");
+    expect(yearsLeft).toEqual("You have outlived your life expectancy on Earth by 28 years.");
   });
+
+  it("should calculate number of years left on Mercury based on average life expectancy", function(){
+    let yearsLeft = calculate.yearsLeftOnMercury(birthdate, "female");
+    expect(yearsLeft).toEqual(230);
+  });
+
+  it("should calculate number of years left on Venus based on average life expectancy", function(){
+    let yearsLeft = calculate.yearsLeftOnVenus(birthdate, "female");
+    expect(yearsLeft).toEqual(0);
+  });
+
 
 
   // it("should calculate days between dates", function(){
