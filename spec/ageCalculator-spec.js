@@ -79,14 +79,43 @@ describe('AgeCalculator', function(){
 
   it("should calculate number of years left on Mercury based on average life expectancy", function(){
     let yearsLeft = calculate.yearsLeftOnMercury(birthdate, "female");
-    expect(yearsLeft).toEqual(230);
+    expect(yearsLeft).toEqual("You have 230 years left to live on Mercury.");
+  });
+
+  it("should calculate number of years left on Mercury based on average life expectancy", function(){
+    let yearsLeft = calculate.yearsLeftOnMercury('1940-09-08', "female");
+    expect(yearsLeft).toEqual("You have outlived your life expectancy on Mercury by 20 years.");
   });
 
   it("should calculate number of years left on Venus based on average life expectancy", function(){
     let yearsLeft = calculate.yearsLeftOnVenus(birthdate, "female");
-    expect(yearsLeft).toEqual(0);
+    expect(yearsLeft).toEqual("You have 89 years left to live on Venus.");
   });
 
+  it("should calculate number of years left on Venus based on average life expectancy", function(){
+    let yearsLeft = calculate.yearsLeftOnVenus('1940-09-08', "female");
+    expect(yearsLeft).toEqual("You have outlived your life expectancy on Venus by 8 years.");
+  });
+
+  it("should calculate number of years left on Mars based on average life expectancy", function(){
+    let yearsLeft = calculate.yearsLeftOnMars(birthdate, "female");
+    expect(yearsLeft).toEqual("You have 29 years left to live on Mars.");
+  });
+
+  it("should calculate number of years left on Mars based on average life expectancy", function(){
+    let yearsLeft = calculate.yearsLeftOnMars('1940-09-08', "female");
+    expect(yearsLeft).toEqual("You have outlived your life expectancy on Mars by 2 years.");
+  });
+
+  it("should calculate number of years left on Jupiter based on average life expectancy", function(){
+    let yearsLeft = calculate.yearsLeftOnJupiter(birthdate, "female");
+    expect(yearsLeft).toEqual("You have 5 years left to live on Jupiter.");
+  });
+
+  // it("should calculate number of years left on Mars based on average life expectancy", function(){
+  //   let yearsLeft = calculate.yearsLeftOnMars('1940-09-08', "female");
+  //   expect(yearsLeft).toEqual("You have outlived your life expectancy on Mars by 2 years.");
+  // });
 
 
   // it("should calculate days between dates", function(){
