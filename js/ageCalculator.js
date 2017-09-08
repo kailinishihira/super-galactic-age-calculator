@@ -1,5 +1,5 @@
-const moment = require('moment');
-moment().format();
+var moment = require('moment');
+// moment().format();
 
 export class AgeCalculator {
 
@@ -8,7 +8,8 @@ export class AgeCalculator {
   }
 
   yearAge(date){
-    return moment().diff(moment([date]), 'years');
+    const yourage = moment().diff(moment([date]), 'years');
+    return yourage;
   }
 
   secondsByDate(date){

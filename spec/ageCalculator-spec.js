@@ -112,11 +112,12 @@ describe('AgeCalculator', function(){
     expect(yearsLeft).toEqual("You have 5 years left to live on Jupiter.");
   });
 
-  // it("should calculate number of years left on Mars based on average life expectancy", function(){
-  //   let yearsLeft = calculate.yearsLeftOnMars('1940-09-08', "female");
-  //   expect(yearsLeft).toEqual("You have outlived your life expectancy on Mars by 2 years.");
-  // });
+  it("should calculate number of years left on Jupiter based on average life expectancy", function(){
+    let yearsLeft = calculate.yearsLeftOnJupiter('1920-09-08', "female");
+    expect(yearsLeft).toEqual("You have outlived your life expectancy on Jupiter by 2 years.");
+  });
 
+});
 
   // it("should calculate days between dates", function(){
   //   let daysBetween = calculate.daysBetween('2017-09-08', '2017-09-07');
@@ -133,6 +134,3 @@ describe('AgeCalculator', function(){
   //   let secondsDifference = calculate.secondsDifference('2017-09-09','2017-09-07');
   //   expect(secondsDifference).toEqual(86400);
   // });
-
-
-});
