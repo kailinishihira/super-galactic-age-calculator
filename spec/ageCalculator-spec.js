@@ -37,12 +37,6 @@ describe('AgeCalculator', function(){
     expect(secondsDay).toEqual(172800);
   });
 
-  // it("should calculate days between dates", function(){
-  //   let daysBetween = calculate.daysBetween('2017-09-08', '2017-09-07');
-  //   expect(daysBetween).toEqual(1);
-  // });
-
-
   it("should convert age in Mercury's solar years", function(){
     let mercuryAge = calculate.mercuryAge(birthdate);
     expect(mercuryAge).toEqual(70);
@@ -63,10 +57,25 @@ describe('AgeCalculator', function(){
     expect(jupiterAge).toEqual(1);
   });
 
+  it("should calculate average life expectancy based on gender", function(){
+    let averageLifeExpectancy = calculate.averageLifeExpectancy("female");
+    expect(averageLifeExpectancy).toEqual(72);
+  });
 
-  // it("should convert age in Mars' solar years", function(){
-  //   let marsAge = calculate.marsAge(birthdate);
-  //   expect(marsAge).toEqual(31.96);
+  it("should calculate number of years left based on average life expectancy", function(){
+    let yearsLeft = calculate.yearsLeftOnEarth(birthdate, "female");
+    expect(yearsLeft).toEqual(55);
+  });
+
+  it("should calculate number of years outlived based on average life expectancy", function(){
+    let yearsLeft = calculate.yearsLeftOnEarth('1917-09-08', "female");
+    expect(yearsLeft).toEqual("You have outlived your life expectancy by 28 years.");
+  });
+
+
+  // it("should calculate days between dates", function(){
+  //   let daysBetween = calculate.daysBetween('2017-09-08', '2017-09-07');
+  //   expect(daysBetween).toEqual(1);
   // });
 
 

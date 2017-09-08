@@ -14,14 +14,14 @@ _A web app which will enable the user to enter their age and it will return thei
 || User may enter their birthdate and it will return their age in years | Birthdate: 2000-09-08 | 17 |
 || User may enter their birthdate and it will return their years of age into seconds | Birthdate: 1997-09-08 | 630720000 |
 || It will calculate how many seconds are in a given number of days | Days: 2 | 172800 |
-|| It will calculate the number of days between two given days | First date: 2017-09-08 <br> Second date: 2017-09-07 | 1 |
-|| User may enter two dates and the difference in seconds will be returned. | First date: 09/07/2017 <br> Second date: 09/08/2017 | 86400 seconds|
-|| User may enter their birthdate and their age will be returned in Mercury years. A Mercury year is .24 Earth years. | Birthdate: 09/08/2000 | |
-|| User may enter their birthdate and their age will be returned in Venus years. A Venus year is .62 Earth years. | Birthdate: 09/08/2000 | |
-|| User may enter their birthdate and their age will be returned in Mars years. A Mars year is 1.88 Earth years. | Birthdate: 09/08/2000 | |
-|| User may enter their birthdate and their age will be returned in Jupiter years. A Jupiter year is 11.86 Earth years. | Birthdate: 09/08/2000 | |
+|| User may enter their birthdate and their age in Earth years will be returned in Mercury years (rounded down). A Mercury year is .24 Earth years. | Birthdate: 09/08/2000 | |
+|| User may enter their birthdate and their age in Earth years will be returned in Venus years (rounded down). A Venus year is .62 Earth years. | Birthdate: 09/08/2000 | |
+|| User may enter their birthdate and their age in Earth years will be returned in Mars years (rounded down). A Mars year is 1.88 Earth years. | Birthdate: 09/08/2000 | |
+|| User may enter their birthdate and their age in Earth years will be returned in Jupiter years (rounded down). A Jupiter year is 11.86 Earth years. | Birthdate: 09/08/2000 | |
 || User may enter their birthdate and the number of years left to live on each planet will be returned, based on the user's life expectancy. | Birthdate: 09/08/2000 ||
 || User may enter their birthdate and the number of years they have surpassed to live on each planet will be returned, based on the user's life expectancy. | Birthdate: 09/08/1917 ||
+|| It will calculate the number of days between two given days | First date: 2017-09-08 <br> Second date: 2017-09-07 | 1 |
+|| User may enter two dates and the difference in seconds will be returned. | First date: 09/07/2017 <br> Second date: 09/08/2017 | 86400 seconds|
 
 
 ## Setup/Installation Requirements

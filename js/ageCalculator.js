@@ -19,20 +19,12 @@ export class AgeCalculator {
     return numDays * 86400;
   }
 
-  // daysBetween(date1, date2){
-  //   const oneDay = 24*60*60*1000;
-  //   const day1 = new Date ([date1]);
-  //   const day2 = new Date ([date2]);
-  //   Math.round(Math.abs((day1.getTime() - day2.getTime())/(oneDay)));
-  // }
-
-
   mercuryAge(date){
-    return Math.floor(this.yearAge(date) / .24);
+    return Math.floor(this.yearAge(date) / 0.24);
   }
 
   venusAge(date){
-    return Math.floor(this.yearAge(date) / .62);
+    return Math.floor(this.yearAge(date) / 0.62);
   }
 
   marsAge(date){
@@ -42,6 +34,37 @@ export class AgeCalculator {
   jupiterAge(date){
     return Math.floor(this.yearAge(date) / 11.86);
   }
+
+  averageLifeExpectancy(gender){
+    let avgLife = 71;
+    if (gender === "female"){
+      return avgLife += 1;
+    } else avgLife -= 3;
+  }
+
+  yearsLeftOnEarth(date, gender){
+    let avgAge = this.averageLifeExpectancy(gender);
+    let yourAge = this.yearAge(date);
+    if(yourAge > avgAge){
+      let outlivedYears = yourAge - avgAge;
+      return("You have outlived your life expectancy by " + outlivedYears + " years.")
+    } else {
+      return avgAge - yourAge;
+    }
+  }
+
+
+}
+
+
+
+  // daysBetween(date1, date2){
+  //   const oneDay = 24*60*60*1000;
+  //   const day1 = new Date ([date1]);
+  //   const day2 = new Date ([date2]);
+  //   Math.round(Math.abs((day1.getTime() - day2.getTime())/(oneDay)));
+  // }
+
 
   // numberOfDays(date1, date2){
   //   const day1 = moment([date1]);
@@ -58,4 +81,3 @@ export class AgeCalculator {
 
 //current date
 // let now = moment();
-}
