@@ -19,26 +19,29 @@ export class AgeCalculator {
     return numDays * 86400;
   }
 
-  // daysInYear(date){
-  //   return moment([this.yearAge(date)]) * 365;
+  // daysBetween(date1, date2){
+  //   const oneDay = 24*60*60*1000;
+  //   const day1 = new Date ([date1]);
+  //   const day2 = new Date ([date2]);
+  //   Math.round(Math.abs((day1.getTime() - day2.getTime())/(oneDay)));
   // }
 
+
   mercuryAge(date){
-    const daysOld = this.yearAge(date) * 365;
-    const mercuryDaysInYear = 365 * .24;
-    return Math.floor(daysOld / mercuryDaysInYear);
+    return Math.floor(this.yearAge(date) / .24);
   }
 
   venusAge(date){
-    const daysOld = this.yearAge(date) * 365;
-    const venusDaysInYear = 365 * .62;
-    return Math.floor(daysOld / venusDaysInYear);
+    return Math.floor(this.yearAge(date) / .62);
   }
 
-  // marsAge(date){
-  //   return Math.floor(this.yearAge(date) * 1.88);
-  // }
+  marsAge(date){
+    return Math.floor(this.yearAge(date) / 1.88);
+  }
 
+  jupiterAge(date){
+    return Math.floor(this.yearAge(date) / 11.86);
+  }
 
   // numberOfDays(date1, date2){
   //   const day1 = moment([date1]);

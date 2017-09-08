@@ -37,6 +37,12 @@ describe('AgeCalculator', function(){
     expect(secondsDay).toEqual(172800);
   });
 
+  // it("should calculate days between dates", function(){
+  //   let daysBetween = calculate.daysBetween('2017-09-08', '2017-09-07');
+  //   expect(daysBetween).toEqual(1);
+  // });
+
+
   it("should convert age in Mercury's solar years", function(){
     let mercuryAge = calculate.mercuryAge(birthdate);
     expect(mercuryAge).toEqual(70);
@@ -46,11 +52,17 @@ describe('AgeCalculator', function(){
     let venusAge = calculate.venusAge(birthdate);
     expect(venusAge).toEqual(27);
   });
-  //
-  // it("should convert age in Mars' solar years", function(){
-  //   let marsAge = calculate.marsAge(birthdate);
-  //   expect(marsAge).toEqual(31);
-  // });
+
+  it("should convert age in Mars' solar years", function(){
+    let marsAge = calculate.marsAge(birthdate);
+    expect(marsAge).toEqual(9);
+  });
+
+  it("should convert age in Jupiter's solar years", function(){
+    let jupiterAge = calculate.jupiterAge(birthdate);
+    expect(jupiterAge).toEqual(1);
+  });
+
 
   // it("should convert age in Mars' solar years", function(){
   //   let marsAge = calculate.marsAge(birthdate);
