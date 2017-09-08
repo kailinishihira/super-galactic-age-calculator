@@ -42,10 +42,10 @@ describe('AgeCalculator', function(){
     expect(mercuryAge).toEqual(70);
   });
 
-  // it("should convert age in Venus' solar years", function(){
-  //   let venusAge = calculate.venusAge(birthdate);
-  //   expect(venusAge).toEqual(10);
-  // });
+  it("should convert age in Venus' solar years", function(){
+    let venusAge = calculate.venusAge(birthdate);
+    expect(venusAge).toEqual(27);
+  });
   //
   // it("should convert age in Mars' solar years", function(){
   //   let marsAge = calculate.marsAge(birthdate);

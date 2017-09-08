@@ -28,11 +28,13 @@ export class AgeCalculator {
     const mercuryDaysInYear = 365 * .24;
     return Math.floor(daysOld / mercuryDaysInYear);
   }
-  //
-  // venusAge(date){
-  //   return Math.floor(this.yearAge(date) * .62);
-  // }
-  //
+
+  venusAge(date){
+    const daysOld = this.yearAge(date) * 365;
+    const venusDaysInYear = 365 * .62;
+    return Math.floor(daysOld / venusDaysInYear);
+  }
+
   // marsAge(date){
   //   return Math.floor(this.yearAge(date) * 1.88);
   // }
