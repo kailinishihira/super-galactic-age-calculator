@@ -5,6 +5,7 @@ $(document).ready(function(){
 
   $('#user-form').submit(function(event){
     event.preventDefault();
+    $('.results').show();
     const birthdate = $('#birthdate').val();
     const gender = $('input:radio[name=gender]:checked').val();
 
@@ -26,26 +27,27 @@ $(document).ready(function(){
     const jupiterAge = calculate.jupiterAge(birthdate);
     const yearsLeftJupiter = calculate.yearsLeftOnJupiter(birthdate, gender);
 
-    $('#results').append("<li>" + "Your years on Earth in seconds = " + secondsAge + "</li>");
-    $('#results').append("<li>" + "Your age in Earth years = " + earthAge + "</li>");
-    $('#results').append("<li>" + "Your life expectancy on Earth in years = " + lifeExpectancy + "</li>");
-    $('#results').append("<li>" + yearsLeft + "</li>");
+    $('#results-earth').append("<li>" + "Your years on Earth in seconds = " + secondsAge + "</li>");
+    $('#results-earth').append("<li>" + "Your age in Earth years = " + earthAge + "</li>");
+    $('#results-earth').append("<li>" + "Your life expectancy on Earth in years = " + lifeExpectancy + "</li>");
+    $('#results-earth').append("<li>" + yearsLeft + "</li>");
 
-    $('#results').append("<li>" + "Your age in Mercury years = " + mercuryAge + "</li>");
-    $('#results').append("<li>" + yearsLeftMercury + "</li>");
+    $('#results-mercury').append("<li>" + "Your age in Mercury years = " + mercuryAge + "</li>");
+    $('#results-mercury').append("<li>" + yearsLeftMercury + "</li>");
 
-    $('#results').append("<li>" + "Your age in Venus years = " + venusAge + "</li>");
-    $('#results').append("<li>" + yearsLeftVenus + "</li>");
+    $('#results-venus').append("<li>" + "Your age in Venus years = " + venusAge + "</li>");
+    $('#results-venus').append("<li>" + yearsLeftVenus + "</li>");
 
-    $('#results').append("<li>" + "Your age in Mars years = " + marsAge + "</li>");
-    $('#results').append("<li>" + yearsLeftMars + "</li>");
+    $('#results-mars').append("<li>" + "Your age in Mars years = " + marsAge + "</li>");
+    $('#results-mars').append("<li>" + yearsLeftMars + "</li>");
 
-    $('#results').append("<li>" + "Your age in Jupiter years = " + jupiterAge + "</li>");
-    $('#results').append("<li>" + yearsLeftJupiter + "</li>");
+    $('#results-jupiter').append("<li>" + "Your age in Jupiter years = " + jupiterAge + "</li>");
+    $('#results-jupiter').append("<li>" + yearsLeftJupiter + "</li>");
   });
 
   $('#date-form').submit(function(event){
     event.preventDefault();
+    $(".seconds").show();
     const startDate = $('#start-date').val();
     const endDate = $('#end-date').val();
     let calculate = new AgeCalculator();
