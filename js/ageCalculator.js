@@ -1,6 +1,3 @@
-var moment = require('moment');
-// moment().format();
-
 export class AgeCalculator {
 
   secondsAge(age){
@@ -8,8 +5,10 @@ export class AgeCalculator {
   }
 
   yearAge(date){
-    const yourage = moment().diff(moment([date]), 'years');
-    return yourage;
+    let today = new Date();
+    let birthdate = new Date(date);
+    const age = new Date(today-birthdate).getFullYear()-1970;
+    return age;
   }
 
   secondsByDate(date){
@@ -18,6 +17,18 @@ export class AgeCalculator {
 
   secondsInADay(numDays){
     return numDays * 86400;
+  }
+
+  daysBetween(date1, date2){
+    let day1 = new Date(date1);
+    let day2 = new Date(date2);
+    return (new Date(day1) - new Date(day2)) / 86400000;
+  }
+
+  secondsBetween(date1, date2){
+    let day1 = new Date(date1);
+    let day2 = new Date(date2);
+    return (new Date(day1) - new Date(day2)) / 1000;
   }
 
   mercuryAge(date){
@@ -110,29 +121,3 @@ export class AgeCalculator {
   }
 
 }
-
-
-
-  // daysBetween(date1, date2){
-  //   const oneDay = 24*60*60*1000;
-  //   const day1 = new Date ([date1]);
-  //   const day2 = new Date ([date2]);
-  //   Math.round(Math.abs((day1.getTime() - day2.getTime())/(oneDay)));
-  // }
-
-
-  // numberOfDays(date1, date2){
-  //   const day1 = moment([date1]);
-  //   const day2 = moment([date2]);
-  //   return day1.diff(day2, 'days');
-  // }
-
-  // secondsDifference(date1, date2){
-  //
-  //   // const firstDate = moment([date1]);
-  //   // const secondDate = moment([date2]);
-  //   // return = moment.duration(firstDate.diff(secondDate, 'seconds'));
-  // }
-
-//current date
-// let now = moment();
