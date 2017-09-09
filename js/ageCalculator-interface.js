@@ -8,22 +8,18 @@ $(document).ready(function(){
     $('.results').show();
     const birthdate = $('#birthdate').val();
     const gender = $('input:radio[name=gender]:checked').val();
-
     let calculate = new AgeCalculator();
 
     const earthAge = calculate.yearAge(birthdate);
     const secondsAge = calculate.secondsByDate(birthdate);
     const lifeExpectancy = calculate.averageLifeExpectancy(gender);
     const yearsLeft = calculate.yearsLeftOnEarth(birthdate, gender);
-
     const mercuryAge = calculate.mercuryAge(birthdate);
     const yearsLeftMercury = calculate.yearsLeftOnMercury(birthdate, gender);
     const venusAge = calculate.venusAge(birthdate);
     const yearsLeftVenus = calculate.yearsLeftOnVenus(birthdate, gender);
-
     const marsAge = calculate.marsAge(birthdate);
     const yearsLeftMars = calculate.yearsLeftOnMars(birthdate, gender);
-
     const jupiterAge = calculate.jupiterAge(birthdate);
     const yearsLeftJupiter = calculate.yearsLeftOnJupiter(birthdate, gender);
 
