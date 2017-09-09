@@ -11,8 +11,8 @@ describe('AgeCalculator', function(){
 
   it("should calculate a user's age in seconds", function(){
 
-    let secondsAge = calculate.secondsAge(20);
-    expect(secondsAge).toEqual(630720000);
+    let secondsAge = calculate.secondsAge(17);
+    expect(secondsAge).toEqual(536112000);
   });
 
   it("should calculate a user's age in years based on their birthdate", function(){
@@ -23,8 +23,8 @@ describe('AgeCalculator', function(){
 
   it("should calculate a user's years of age in seconds, by birthdate", function(){
 
-    let secondsAge = calculate.secondsByDate('1997-09-08');
-    expect(secondsAge).toEqual(630720000);
+    let secondsAge = calculate.secondsByDate(birthdate);
+    expect(secondsAge).toEqual(536112000);
   });
 
   it("should convert number of days into seconds", function(){

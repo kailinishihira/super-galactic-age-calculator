@@ -10,9 +10,9 @@ _A web app which will enable the user to enter their age and it will return thei
 
 || Behavior  | Input  | Output  |
 |---|---|---|---|
-|| User may enter their age in years and it will be converted into seconds, based on a common earth year (365 days).  | User's age: 20 years old | 630720000 |
+|| User may enter their age in years and it will be converted into seconds, based on a common earth year (365 days).  | User's age: 17 years old | 536112000 |
 || User may enter their birthdate and it will return their age in years | Birthdate: 2000-09-08 | 17 |
-|| User may enter their birthdate and it will return their years of age into seconds | Birthdate: 1997-09-08 | 630720000 |
+|| User may enter their birthdate and it will return their years of age into seconds | Birthdate: 2000-09-08 | 536112000 |
 || It will calculate how many seconds are in a given number of days | Days: 2 | 172800 |
 || User may enter their birthdate and their age in Earth years will be returned in Mercury years (rounded down). A Mercury year is .24 Earth years. | Birthdate: 09/08/2000 | 70 |
 || User may enter their birthdate and their age in Earth years will be returned in Venus years (rounded down). A Venus year is .62 Earth years. | Birthdate: 09/08/2000 | 27 |
