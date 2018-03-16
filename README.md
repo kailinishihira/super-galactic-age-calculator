@@ -6,7 +6,7 @@
 
 ## Description
 
-_A web app which will enable the user to enter their age and it will return their age in seconds, Mercury years, Venus years, Mars years, and Jupiter years. The user's life expectancy and number of years left to live will also be determined._
+_A web app which will enable the user to enter their age and it will return their age in seconds, Mercury years, Venus years, Mars years, and Jupiter years. The user's life expectancy and number of years left to live will also be predicted._
 
 || Behavior  | Input  | Output  |
 |---|---|---|---|
@@ -40,6 +40,6 @@ _A web app which will enable the user to enter their age and it will return thei
 
 ### License
 
-Copyright (c) 2017 **_Kaili Nishihira_**
+Copyright (c) 2018 **_Kaili Nishihira_**
 
 *Licensed under the [MIT License](https://opensource.org/licenses/MIT)*
